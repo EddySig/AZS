@@ -79,6 +79,37 @@
             android:text="Вход"
             android:textColor="#fff"
             android:background="#5f70a3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebook"
+                android:layout_marginRight="35dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vk"
+                android:layout_marginRight="35dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/googleplus"
+                android:layout_marginRight="35dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/odnoklassniki"
+
+                />
+        </LinearLayout>
     </LinearLayout>
     </LinearLayout>
 </FrameLayout>

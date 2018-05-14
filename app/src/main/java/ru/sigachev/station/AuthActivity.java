@@ -17,6 +17,8 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
 
         btnAuth = (Button)findViewById(R.id.auth);
         btnAuth.setOnClickListener(this);
+
+
     }
 
     @Override
