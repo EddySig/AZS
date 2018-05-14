@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+
+
+   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/border_layout"
     >
-       <TableRow
-           android:layout_marginLeft="50dp"
-           android:layout_marginTop="50dp">
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Вид топлива "
-               android:textColor="#fff"
-               android:textSize="18dp"/>
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="A-92"
-                android:textColor="#d13f41"
-                android:textSize="18dp"
-                />
-       </TableRow>
-        <TableRow
-            android:layout_marginLeft="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Цена"
-                android:textColor="#fff"
-                android:textSize="18dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="41.55"
-                android:textColor="#d13f41"
-                android:textSize="18dp"/>
-        </TableRow>
 
-   </TableLayout>
+       <ImageView
+           android:id="@+id/imageView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentTop="true"
+           android:layout_marginStart="67dp"
+           android:layout_marginTop="65dp"
+           app:srcCompat="@drawable/gasstation" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginEnd="64dp"
+        android:text="A-92"
+        android:textSize="40dp"
+        android:textColor="#f70000"
+        android:fontFamily="@font/bgothm"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignStart="@+id/textView2"
+        android:text="41.35"
+        android:textSize="40dp"
+        android:textColor="#f70000"
+
+        android:fontFamily="@font/bgothm"/>
+
+</RelativeLayout>

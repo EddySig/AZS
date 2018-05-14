@@ -1,7 +1,6 @@
 package ru.sigachev.station;
 
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -11,28 +10,28 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        ViewPager pager=(ViewPager)findViewById(R.id.pager);
-        pager.setAdapter(new AdapterPage(getSupportFragmentManager()));
-
+        setContentView(R.layout.activity_maps);
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
         // Add a marker in Sydney and move the camera
         LatLng perm = new LatLng(58.0201783, 55.9540982);
-        googleMap.addMarker(new MarkerOptions().position(perm).title("Marker in Perm"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(perm));
+        mMap.addMarker(new MarkerOptions().position(perm).title("Marker in Perm"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(perm));
     }
 }
