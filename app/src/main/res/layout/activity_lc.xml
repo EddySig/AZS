@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LCActivity"
-    android:background="#5f70a3">
+    android:orientation="vertical"
+    android:background="@drawable/back">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,12 +24,12 @@
 
         <TextView
             android:id="@+id/usrname"
-            android:layout_width="182dp"
+            android:layout_width="wrap_content"
             android:layout_height="35dp"
 
-            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignBottom="@+id/usrface"
             android:layout_alignParentStart="true"
-            android:text="TextView"
+            android:text="Дата регистрации: dd/MM/yyyy"
             android:textColor="#fff" />
 
         <TextView
@@ -39,4 +40,15 @@
             android:text="Вы авторизованы, как %USER%"
             android:textColor="#fff" />
     </RelativeLayout>
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:background="#5f70a3"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="сделать снимок"
+        />
 </LinearLayout>

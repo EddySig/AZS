@@ -9,6 +9,7 @@ import android.widget.Button;
 public class AuthActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnAuth;
+    private Button btnReg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +19,22 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
         btnAuth = (Button)findViewById(R.id.auth);
         btnAuth.setOnClickListener(this);
 
+        btnReg = (Button)findViewById(R.id.reg);
+        btnReg.setOnClickListener(this);
+
 
     }
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.auth:
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent); break;
+            case R.id.reg:
+                Intent intent2 = new Intent(this, RegActivity.class);
+                startActivity(intent2); break;
+        }
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 }

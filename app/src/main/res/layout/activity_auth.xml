@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back">
+    android:background="@drawable/back"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,7 +25,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="300dp"
-        android:layout_height="350dp"
+        android:layout_height="400dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:paddingTop="25dp"
@@ -73,18 +75,11 @@
             android:ems="10"
             android:inputType="textPassword"
             android:textColor="#fff" />
-        <Button
-            android:id="@+id/auth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Вход"
-            android:textColor="#fff"
-            android:background="#5f70a3"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -111,6 +106,23 @@
 
                 />
         </LinearLayout>
+        <Button
+            android:id="@+id/auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вход"
+            android:textColor="#fff"
+            android:background="#5f70a3"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:id="@+id/reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Регистрация"
+            android:textColor="#fff"
+            android:background="#5f70a3"/>
+
+
     </LinearLayout>
     </LinearLayout>
 </FrameLayout>
