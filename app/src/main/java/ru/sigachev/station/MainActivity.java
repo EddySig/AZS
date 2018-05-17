@@ -1,6 +1,9 @@
 package ru.sigachev.station;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener {
 
     private TextView btnLC;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         btnLC = (TextView) findViewById(R.id.usrName);
         btnLC.setOnClickListener(this);
+
+        dialog = new Dialog(MainActivity.this);
+        // Передайте ссылку на разметку
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.dialog_load);
+
     }
 
     @Override
@@ -46,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onClick(View v) {
+        dialog.show();
         Intent intent = new Intent(this, LCActivity.class);
         startActivity(intent);
     }
