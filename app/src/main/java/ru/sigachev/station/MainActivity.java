@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private TextView btnLC;
     private Dialog dialog;
+    private TextView btnti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         btnLC = (TextView) findViewById(R.id.usrName);
         btnLC.setOnClickListener(this);
+
+        btnti = (TextView) findViewById(R.id.ti);
+        btnti.setOnClickListener(this);
 
         dialog = new Dialog(MainActivity.this);
         // Передайте ссылку на разметку
@@ -56,8 +60,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onClick(View v) {
-        dialog.show();
-        Intent intent = new Intent(this, LCActivity.class);
-        startActivity(intent);
+        switch (v.getId()){
+            case R.id.usrName:
+                dialog.show();
+                Intent intent = new Intent(this, LCActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ti:
+                dialog.show();
+                Intent intent1 = new Intent(this, InfoStationActivity.class);
+                startActivity(intent1);
+                break;
+        }
+
     }
 }
