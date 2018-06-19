@@ -35,9 +35,9 @@ public class CameraActivity extends AppCompatActivity {
 
 
 
-    private static final String MODEL_FILE = "//android_asset/saved_model.pb";
+    private static final String MODEL_FILE = "file:///android_asset/saved_model.pb";
 
-    private static final String LABEL_FILE = "//android_asset/labels.pbtxt";
+    private static final String LABEL_FILE = "file:///android_asset/labels.pbtxt";
 
 
 

@@ -197,7 +197,7 @@ public class TensorFlowImageClassifier implements Classifier {
 
         // TODO(andrewharp): make this handle non-assets.
 
-        String actualFilename = labelFilename.split("//android_asset/")[1];
+        String actualFilename = labelFilename.split("file:///android_asset/")[1];
 
         Log.i(TAG, "Reading labels from: " + actualFilename);
 
