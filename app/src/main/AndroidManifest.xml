@@ -41,7 +41,8 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".RegActivity" />
-        <activity android:name=".InfoStationActivity"></activity>
+        <activity android:name=".InfoStationActivity" />
+        <activity android:name=".CameraActivity"></activity>
     </application>
 
 </manifest>

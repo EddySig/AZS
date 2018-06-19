@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.usrName:
-                dialog.show();
-                Intent intent = new Intent(this, LCActivity.class);
+              //  dialog.show();
+                Intent intent = new Intent(this, CameraActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ti:
